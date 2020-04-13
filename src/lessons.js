@@ -11,7 +11,7 @@ const lessons = [
   `,
   },
   {
-    question: `Var let const
+    question: `Var, let, and const
   `,
   },
 ];

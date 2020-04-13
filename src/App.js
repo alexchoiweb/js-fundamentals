@@ -9,6 +9,7 @@ import Lesson from "./Components/Lesson";
 
 export default function App() {
   const [currentLesson, setCurrentLesson] = useState(null);
+  const [NavIsHidden, setNavIsHidden] = useState(false);
 
   function changeLesson(index) {
     setCurrentLesson(lessons[index]);
@@ -16,11 +17,13 @@ export default function App() {
   }
 
   function toggleNav() {
-    let nav = document.getElementsByClassName("Nav")[0];
-    if (nav.style.display === "block") {
-      nav.style.display = "none";
-    } else {
+    const nav = document.getElementsByClassName("Nav")[0];
+    if (NavIsHidden) {
       nav.style.display = "block";
+      setNavIsHidden(false);
+    } else {
+      nav.style.display = "none";
+      setNavIsHidden(true);
     }
   }
 
