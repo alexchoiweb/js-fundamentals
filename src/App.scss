@@ -1,0 +1,56 @@
+$primary: white;
+$secondary: blue;
+
+body {
+  box-sizing: border-box;
+  background-color: $primary;
+  color: $secondary;
+}
+
+header {
+  font-size: 2rem;
+  position: absolute;
+}
+
+.App {
+  #navButton {
+    float: left;
+    font-size: 1.3rem;
+  }
+
+  #navButton:hover {
+    .navButtonText {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.Nav {
+  float: left;
+  display: block;
+  padding: 10px 20px;
+  background-color: $secondary;
+  color: $primary;
+  font-size: 1.2rem;
+  font-weight: bold;
+  // width: 15vw;
+  height: 100vh;
+
+  p {
+    margin: 0;
+    display: block;
+  }
+
+  .navLesson:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.Lesson {
+  margin: 0 auto;
+  width: 50%;
+  height: 100vh;
+  background-color: $secondary;
+  color: $primary;
+}

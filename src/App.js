@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
+import "./App.css";
+
+import lessons from "./lessons.js";
+
+import Nav from "./Components/Nav";
+import Lesson from "./Components/Lesson";
+
+export default function App() {
+  const [currentLesson, setCurrentLesson] = useState(null);
+
+  function changeLesson(index) {
+    setCurrentLesson(lessons[index]);
+    console.log(currentLesson);
+  }
+
+  function toggleNav() {
+    let nav = document.getElementsByClassName("Nav")[0];
+    if (nav.style.display === "block") {
+      nav.style.display = "none";
+    } else {
+      nav.style.display = "block";
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav lessons={lessons} changeLesson={changeLesson}></Nav>
+      <button id="navButton" className="btn-light" onClick={() => toggleNav()}>
+        <i className="navButtonText fas fa-angle-double-left"></i>
+      </button>
+      <Lesson lesson={currentLesson}></Lesson>
     </div>
   );
 }
-
-export default App;
