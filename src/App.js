@@ -13,7 +13,6 @@ export default function App() {
 
   function changeLesson(index) {
     setCurrentLesson(lessons[index]);
-    console.log(currentLesson);
   }
 
   function toggleNav() {

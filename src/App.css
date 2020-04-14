@@ -20,8 +20,8 @@ header {
 }
 
 .Nav {
-  float: left;
   display: block;
+  float: left;
   padding: 10px 20px;
   background-color: blue;
   color: white;
@@ -42,9 +42,26 @@ header {
 
 .Lesson {
   margin: 0 auto;
+  padding-top: 50px;
   width: 50%;
   height: 100vh;
+  color: blue;
+}
+
+.Lesson .lessonHeader {
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+  line-height: 2.6rem;
   background-color: blue;
   color: white;
+  font-weight: 500;
+}
+
+.Lesson .lessonBody {
+  margin-top: 20px;
+  background-color: white;
+  color: blue;
+  font-size: 1.5rem;
+  line-height: 1.76rem;
 }
 /*# sourceMappingURL=App.css.map */
